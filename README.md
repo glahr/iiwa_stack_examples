@@ -11,11 +11,11 @@ In brief, here is contained :
 ## Python example
 
 Run:
-´´´
+```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
-´´´
+```
 
 Wait for the model to load, then:
-´´´
+```
 rosrun iiwa_tool_examples joint_pos_ctrl_test.py
-´´´
+```
