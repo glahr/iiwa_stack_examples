@@ -12,17 +12,22 @@ In brief, here is contained :
 
 # Joint control
 
-Run:
+Run in first terminal:
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
 ```
 
-Wait for the model to load, then:
+Wait for the model to load, then, into another terminal:
 ```
 rosrun iiwa_tool_examples joint_pos_ctrl_test.py
 ```
 # Cartesian control
+First terminal:
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+```
+
+Second terminal:
+```
 rosrun iiwa_tool_examples cartesian_pos_ctrl_test.py
 ```
