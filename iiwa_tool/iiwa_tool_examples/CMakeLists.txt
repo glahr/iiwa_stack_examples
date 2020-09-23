@@ -29,3 +29,6 @@ target_link_libraries(setting_control_mode ${catkin_LIBRARIES})
 
 catkin_install_python(PROGRAMS scripts/joint_pos_ctrl_test.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS scripts/cartesian_pos_ctrl_test.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
