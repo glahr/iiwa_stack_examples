@@ -10,7 +10,7 @@ In brief, here is contained :
 
 ## Python example
 
-# Joint control
+### Joint control
 
 Run in first terminal:
 ```
@@ -21,7 +21,7 @@ Wait for the model to load, then, into another terminal:
 ```
 rosrun iiwa_tool_examples joint_pos_ctrl_test.py
 ```
-# Cartesian control
+### Cartesian control
 First terminal:
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
