@@ -10,6 +10,8 @@ In brief, here is contained :
 
 ## Python example
 
+# Joint control
+
 Run:
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
@@ -18,4 +20,9 @@ roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
 Wait for the model to load, then:
 ```
 rosrun iiwa_tool_examples joint_pos_ctrl_test.py
+```
+# Cartesian control
+```
+roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+rosrun iiwa_tool_examples cartesian_pos_ctrl_test.py
 ```
