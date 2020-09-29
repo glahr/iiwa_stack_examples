@@ -31,3 +31,9 @@ Second terminal:
 ```
 rosrun iiwa_tool_examples cartesian_pos_ctrl_test.py
 ```
+
+### Moveit
+```
+roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+roslaunch iiwa_tool_examples iiwa_tool_command_moveit.launch
+```
