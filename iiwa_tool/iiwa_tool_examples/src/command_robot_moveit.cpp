@@ -1,3 +1,4 @@
+#include "ros/console.h"
 #include "ros/ros.h"
 #include <iiwa_ros/state/cartesian_pose.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
@@ -6,9 +7,12 @@ using moveit::planning_interface::MoveItErrorCode;
 
 int main (int argc, char **argv) {
 
-  // Initialize ROS
+    // Initialize ROS
   ros::init(argc, argv, "CommandRobotMoveit");
+  // std::cout << "MINHAS INFOS" << argc << "\t" << argv << '\n';
   ros::NodeHandle nh("~");
+  // std::string my_param;
+  // std::cout << nh.getParam("my_name", my_param);
 
   // ROS spinner.
   ros::AsyncSpinner spinner(1);
@@ -21,8 +25,11 @@ int main (int argc, char **argv) {
   geometry_msgs::PoseStamped command_cartesian_position;
 
   // Dynamic parameters. Last arg is the default value. You can assign these from a launch file.
-  nh.param<std::string>("move_group", movegroup_name, "manipulator");
-  nh.param<std::string>("ee_link", ee_link, "tool_link_ee");
+  // nh.param<std::string>("move_group", movegroup_name, "manipulator");
+  // std::cout << movegroup_name << '\n';
+  // nh.param<std::string>("ee_link", ee_link, "tool_link_ee");
+  movegroup_name = "manipulator";
+  ee_link = "tool_link_ee";
 
   // Dynamic parameter to choose the rate at wich this node should run
   double ros_rate;
@@ -33,6 +40,7 @@ int main (int argc, char **argv) {
 
   // Create MoveGroup
   moveit::planning_interface::MoveGroupInterface group(movegroup_name);
+  ROS_WARN("Hello %s", "World");
   moveit::planning_interface::MoveGroupInterface::Plan myplan;
 
   // Configure planner
