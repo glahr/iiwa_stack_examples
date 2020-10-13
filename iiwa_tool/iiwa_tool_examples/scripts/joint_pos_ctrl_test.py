@@ -6,13 +6,13 @@ import rospy
 
 from iiwa_msgs.msg import JointPosition
 
-def joint_cb(data):
-    print(data)
-    print(type(data))
-    print("\n\n\n")
+# def joint_cb(data):
+#     print(data)
+#     print(type(data))
+#     print("\n\n\n")
 
 def joint_subscriber():
-    pose_sub = rospy.Subscriber('/iiwa/state/JointPosition', JointPosition, joint_cb)
+    pose_sub = rospy.Subscriber('/iiwa/state/JointPosition', JointPosition)#, joint_cb)
     # rospy.spin()
 
 def joint_pos_pub():
