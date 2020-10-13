@@ -25,10 +25,6 @@ rosrun iiwa_tool_examples joint_pos_ctrl_test.py
 First terminal:
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
-```
-
-Second terminal:
-```
 rosrun iiwa_tool_examples cartesian_pos_ctrl_test.py
 ```
 
@@ -36,4 +32,20 @@ rosrun iiwa_tool_examples cartesian_pos_ctrl_test.py
 ```
 roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
 roslaunch iiwa_tool_examples iiwa_tool_command_moveit.launch
+```
+
+### Actionlib
+
+#### Joint control
+```
+roslaunch iiwa_sim iiwa_sim_roscontrol.launch
+roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+rosrun iiwa_tool_examples joint_pos_ctrl_test_action.py
+```
+
+#### Cartesian control
+```
+roslaunch iiwa_sim iiwa_sim_roscontrol.launch
+roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+rosrun iiwa_tool_examples cartesian_pos_ctrl_test_action.py
 ```
