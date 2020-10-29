@@ -38,3 +38,6 @@ catkin_install_python(PROGRAMS scripts/joint_pos_ctrl_test_action.py
 
 catkin_install_python(PROGRAMS scripts/cartesian_pos_ctrl_test_action.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS scripts/task_example.py
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
