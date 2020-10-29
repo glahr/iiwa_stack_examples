@@ -39,13 +39,13 @@ roslaunch iiwa_tool_examples iiwa_tool_command_moveit.launch
 #### Joint control
 ```
 roslaunch iiwa_sim iiwa_sim_roscontrol.launch
-roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+roslaunch iiwa_gazebo iiwa_gazebo.launch
 rosrun iiwa_tool_examples joint_pos_ctrl_test_action.py
 ```
 
 #### Cartesian control
 ```
 roslaunch iiwa_sim iiwa_sim_roscontrol.launch
-roslaunch iiwa_gazebo iiwa_gazebo_with_sunrise.launch
+roslaunch iiwa_gazebo iiwa_gazebo.launch
 rosrun iiwa_tool_examples cartesian_pos_ctrl_test_action.py
 ```
