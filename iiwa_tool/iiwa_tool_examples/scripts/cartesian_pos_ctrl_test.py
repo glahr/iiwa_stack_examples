@@ -26,6 +26,10 @@ def pose_publisher():
     x_1 = PoseStamped()
     x_2 = PoseStamped()
 
+    x0 = CartesianPose()
+    x1 = CartesianPose()
+    x2 = CartesianPose()
+
     x_0.pose.position.z = 1.3
     x_0.pose.orientation.w = 1.0
 
@@ -42,13 +46,17 @@ def pose_publisher():
     # states = listener()
     # pose_subscriber(states)
 
+    x0.poseStamped = x_0
+    x1.poseStamped = x_1
+    x2.poseStamped = x_2
+
     while not rospy.is_shutdown():
         rospy.loginfo("Publishing pos x_0: \n{}".format(x_0.pose))
-        pose_pub.publish(x_0)
+        pose_pub.publish(x0)
         rate.sleep()
 
         rospy.loginfo("Publishing pos x_1: \n{}".format(x_1.pose.position))
-        pose_pub.publish(x_1)
+        pose_pub.publish(x1)
         rate.sleep()
         #
         # rospy.loginfo("Publishing pos x_2: \n{}".format(x_2.pose.position))
@@ -64,7 +72,7 @@ def pose_publisher():
 
 if __name__ == "__main__":
 
-    pose_pub = rospy.Publisher('/iiwa/command/CartesianPose', PoseStamped, queue_size = 10)
+    pose_pub = rospy.Publisher('/iiwa/command/CartesianPose', CartesianPose, queue_size = 10)
     rospy.init_node('cart_pos_ctrl', anonymous=True)
 
     try:
